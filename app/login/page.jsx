@@ -1,4 +1,3 @@
-Page · JSX
 "use client";
 
 import { useState } from "react";
