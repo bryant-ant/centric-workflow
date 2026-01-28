@@ -23,3 +23,8 @@ export function middleware(request) {
   // Everyone else → redirect to login
   return NextResponse.redirect(new URL("/login", request.url));
 }
+
+// Only run middleware on page routes, not on static assets or Next internals
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+};
